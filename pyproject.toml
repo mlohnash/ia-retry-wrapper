@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ia-retry-wrapper"
+version = "1.0.0"
+description = "Keep re-running Internet Archive spreadsheet uploads until they finish, with per-CSV logs."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = ["internetarchive"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+]
+
+[project.scripts]
+ia-retry = "ia_retry_wrapper:main"
+
+[tool.setuptools]
+py-modules = ["ia_retry_wrapper"]
